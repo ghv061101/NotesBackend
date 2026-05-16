@@ -2,7 +2,7 @@
   "name": "notes-app-backend",
   "version": "1.0.0",
   "description": "Minimal Notes API using Express and MongoDB Atlas",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
