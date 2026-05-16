@@ -46,4 +46,4 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: err.message || 'Server error' });
 });
 
-module.exports = app;
+module.exports = { app, start };
