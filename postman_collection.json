@@ -1,0 +1,407 @@
+{
+  "info": {
+    "name": "Notes App API",
+    "description": "Complete API collection for Notes App (MongoDB, Express, Node.js) with multiple examples",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Register - Example 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"harsha@example.com\",\n  \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "auth", "register"]
+            },
+            "description": "Register user harsha@example.com"
+          }
+        },
+        {
+          "name": "Register - Example 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"securepass123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "auth", "register"]
+            },
+            "description": "Register user john@example.com"
+          }
+        },
+        {
+          "name": "Register - Example 3",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"alice@example.com\",\n  \"password\": \"password456\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/register",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "auth", "register"]
+            },
+            "description": "Register user alice@example.com"
+          }
+        },
+        {
+          "name": "Login - Example 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"harsha@example.com\",\n  \"password\": \"123456\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "auth", "login"]
+            },
+            "description": "Login as harsha@example.com"
+          }
+        },
+        {
+          "name": "Login - Example 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"john@example.com\",\n  \"password\": \"securepass123\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "auth", "login"]
+            },
+            "description": "Login as john@example.com"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Notes",
+      "item": [
+        {
+          "name": "Create Note - Example 1 (Todo)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"My First Todo\",\n  \"content\": \"Complete project documentation by Friday\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Create a todo note"
+          }
+        },
+        {
+          "name": "Create Note - Example 2 (Shopping List)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Shopping List\",\n  \"content\": \"Milk, Eggs, Bread, Cheese, Tomatoes, Spinach, Chicken\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Create a shopping list note"
+          }
+        },
+        {
+          "name": "Create Note - Example 3 (Meeting Notes)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Team Meeting - May 16\",\n  \"content\": \"Discussion points:\\n1. Project status update\\n2. Q2 roadmap review\\n3. Resource allocation\\n4. Next sprint planning\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Create meeting notes"
+          }
+        },
+        {
+          "name": "Create Note - Example 4 (Code Snippet)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Express Middleware Pattern\",\n  \"content\": \"const auth = (req, res, next) => {\\n  const token = req.header('Authorization');\\n  if (!token) return res.status(401).json({ error: 'No token' });\\n  try {\\n    const payload = jwt.verify(token, SECRET);\\n    req.user = payload;\\n    next();\\n  } catch (err) {\\n    res.status(401).json({ error: 'Invalid token' });\\n  }\\n};\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Create note with code snippet"
+          }
+        },
+        {
+          "name": "Create Note - Example 5 (Ideas)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Product Ideas\",\n  \"content\": \"- Mobile app for note taking\\n- Dark mode support\\n- Markdown formatting\\n- Cloud sync\\n- Collaboration features\\n- Export to PDF\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Create brainstorm ideas note"
+          }
+        },
+        {
+          "name": "List All Notes",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/notes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes"]
+            },
+            "description": "Get all notes for the authenticated user"
+          }
+        },
+        {
+          "name": "Get Note by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/notes/{{noteId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes", "{{noteId}}"]
+            },
+            "description": "Get a specific note by ID. Replace {{noteId}} with actual note ID."
+          }
+        },
+        {
+          "name": "Update Note - Example 1",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Todo - High Priority\",\n  \"content\": \"Complete project documentation by Friday - URGENT\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes/{{noteId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes", "{{noteId}}"]
+            },
+            "description": "Update note with new title and content"
+          }
+        },
+        {
+          "name": "Update Note - Example 2",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Shopping List - Updated\",\n  \"content\": \"Milk, Eggs, Bread, Cheese, Tomatoes, Spinach, Chicken, Butter, Pasta\"\n}"
+            },
+            "url": {
+              "raw": "http://localhost:8080/api/notes/{{noteId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes", "{{noteId}}"]
+            },
+            "description": "Update shopping list with additional items"
+          }
+        },
+        {
+          "name": "Delete Note",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{token}}"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:8080/api/notes/{{noteId}}",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "8080",
+              "path": ["api", "notes", "{{noteId}}"]
+            },
+            "description": "Delete a note. Replace {{noteId}} with actual note ID."
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": "your_jwt_token_here",
+      "description": "JWT token from login/register response - copy and paste here"
+    },
+    {
+      "key": "noteId",
+      "value": "note_id_from_response",
+      "description": "Note ID from create or list response - copy and paste here"
+    }
+  ]
+}
